@@ -16,37 +16,118 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar bg-primary" data-bs-theme="">
+      
+    </nav>
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Üniversite</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="karakoçüni.png" alt="School Logo" width="170px"  height="100px" >
+      </a>      <a class="navbar-brand" href="#">üniversite</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Ana Sayfa</a>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    üniversite hakkında
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="aday-ogrenci.html">aday öğreci</a></li>
+                    <li><a class="dropdown-item" href="bolumler.html">bölümler</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="imkan.html">üniversite imkanları</a></li>
+                  </ul>
+                </li>  
+
+
+
+            
+            <li class="nav-item dropdown">  
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Yönetim
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Rektör</a></li>
+                <li><a class="dropdown-item" href="#">Rektör Yardımcıları</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Dekanlar</a></li>
+                <li><a class="dropdown-item" href="#">Öğretim Görevlileri</a></li>
+                <li><a class="dropdown-item" href="#">Genel Sekreter</a></li>
+                <li><a class="dropdown-item" href="#">Enstitü Müdürleri</a></li> 
+                <li><a class="dropdown-item" href="#">Daire Başkanları</a></li>
+                <li><a class="dropdown-item" href="#">Genel Sekreterler</a></li>
+                <li><a class="dropdown-item" href="#">Yönetim Kurulu</a></li>
+                <li><a class="dropdown-item" href="#">Senato</a></li>
+                <li><a class="dropdown-item" href="#">Rektör Danışmanları</a></li>
+                <li><a class="dropdown-item" href="#">Sekreterler</a></li>
+                <li><a class="dropdown-item" href="#">Hizmet Personelleri</a></li>
+              </ul>
+            </li>       
+        
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Birimler
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Fakülteler</a></li>
+                <li><a class="dropdown-item" href="#">Yüksekokullar</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Koordinatörlükler</a></li>
+              </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Hakkında</a>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                öğrenci
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">yönetmelikler</a></li>
+                <li><a class="dropdown-item" href="#">başvurular</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">öğrenci değişim programları</a></li>
+                <li><a class="dropdown-item" href="#">yatay geçiş programı</a></li>
+                <li><a class="dropdown-item" href="#">çap programı</a></li>
+                <li><a class="dropdown-item" href="#">öğrenci işleri</a></li>
+              </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Bölümler</a>
+
+           
+
+          
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                e-hizmetler
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">lisansli yazılımlar</a></li>
+                <li><a class="dropdown-item" href="#">sistemler/hizmetler</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">yörüngeler</a></li>
+              </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">İmkanlar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">İletişim</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Ara" aria-label="Ara">
-            <button class="btn btn-outline-success" type="submit">Ara</button>
+
+            <button type="button" class="btn btn-primary">übys giriş</button>
+
+         
+
+       
+          
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
       </div>
     </nav>
+      
 
     <div class="container mt-5">
       <div class="text-center">
