@@ -13,9 +13,49 @@
         height: 200px;
         object-fit: cover;
       }
+      .carousel-item img {
+          height: 500px;
+          object-fit: cover;
+      }
+      .carousel-caption {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          text-align: center;
+      }
+      .carousel-caption button {
+          margin-top: 10px;
+      }
+      .card {
+          margin: 15px;
+          width: 100%; 
+          height: auto; 
+      }
+      .card img {
+          height: 250px;
+          object-fit: cover;
+      }
+      .footer {
+          background-color: #343a40;
+          color: white;
+          padding: 40px 0;
+      }
+      .footer a {
+          color: white;
+      }
+      .footer a:hover {
+          color: #d4d4d4;
+          text-decoration: none;
+      }
+      .footer .social-icons a {
+          margin-right: 15px;
+      }
     </style>
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>ccc
     <nav class="navbar bg-primary" data-bs-theme="">
       
     </nav>
@@ -53,11 +93,11 @@
                 Yönetim
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Rektör</a></li>
-                <li><a class="dropdown-item" href="#">Rektör Yardımcıları</a></li>
+                <li><a class="dropdown-item" href="rektör.html">Rektör</a></li>
+                <li><a class="dropdown-item" href="rektör.html">Rektör Yardımcıları</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Dekanlar</a></li>
-                <li><a class="dropdown-item" href="#">Öğretim Görevlileri</a></li>
+                <li><a class="dropdown-item" href="DEKAN.HTML">Dekanlar</a></li>
+                <li><a class="dropdown-item" href="öğr.gör.html">Öğretim Görevlileri</a></li>
                 <li><a class="dropdown-item" href="#">Genel Sekreter</a></li>
                 <li><a class="dropdown-item" href="#">Enstitü Müdürleri</a></li> 
                 <li><a class="dropdown-item" href="#">Daire Başkanları</a></li>
@@ -127,6 +167,8 @@
         </div>
       </div>
     </nav>
+      
+       
       
 
     <div class="container mt-5">
