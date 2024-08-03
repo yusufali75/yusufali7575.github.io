@@ -47,6 +47,11 @@
       .footer .social-icons a {
           margin-right: 15px;
       }
+      .scrollspy-example {
+            position: relative;
+            height: 400px;
+            overflow: auto;
+        }
     </style>
   </head>
   <body>
@@ -277,51 +282,125 @@
     
     <br><br>
 <center> <h1 style="background-color: aqua;"> HABERİN OLSUN</h1></center>
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-md-4 col-sm-12">
-          <div class="card">
-            <img src="graduation-cap-311378_640.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">aday öğrenci</h5>
-              <p class="card-text">Farklı bölümler hakkında bilgi edinin.  <h2>Üniversitemize Hoş Geldiniz!</h2>
-                <p>Değerli Aday Öğrencilerimiz,</p>
-                <p>Üniversitemize hoş geldiniz! Üniversite hayatınızın en heyecan verici ve önemli dönemlerinden biri olacaktır. Bu süreçte sizlere en iyi eğitim imkanlarını sunmak için buradayız.
-                  <p>yeni güz dönemi hayırlı olsun
-                </p></p>
-              <a href="#" class="btn btn-primary">Daha fazla bilgi</a>
-            </div>
+  
+
+<div class="container my-4">
+  <div class="row">
+      <!-- İlk Scrollspy Bileşeni -->
+      <div class="col-md-4">
+          <img src="haber1.png" alt="Image 1" class="img-fluid mb-3">
+          <nav id="navbar-example2-1" class="navbar bg-body-tertiary px-3 mb-3">
+              <a class="navbar-brand" href="#">HABERLER</a>
+              <ul class="nav nav-pills">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#scrollspyHeading1-1">First</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#scrollspyHeading2-1">Second</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#scrollspyHeading3-1">Third</a></li>
+                          <li><a class="dropdown-item" href="#scrollspyHeading4-1">Fourth</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#scrollspyHeading5-1">Fifth</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </nav>
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example2-1" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+              <h4 id="scrollspyHeading1-1">First heading</h4>
+              <p>Bu, birinci scrollspy bileşeninin birinci bölümüdür.</p>
+              <h4 id="scrollspyHeading2-1">Second heading</h4>
+              <p>Bu, birinci scrollspy bileşeninin ikinci bölümüdür.</p>
+              <h4 id="scrollspyHeading3-1">Third heading</h4>
+              <p>Bu, birinci scrollspy bileşeninin üçüncü bölümüdür.</p>
+              <h4 id="scrollspyHeading4-1">Fourth heading</h4>
+              <p>Bu, birinci scrollspy bileşeninin dördüncü bölümüdür.</p>
+              <h4 id="scrollspyHeading5-1">Fifth heading</h4>
+              <p>Bu, birinci scrollspy bileşeninin beşinci bölümüdür.</p>
           </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <div class="card">
-            <img src="flag-1095057_640.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Etkinlikler</h5>
-              <p class="card-text">Yaklaşan etkinlikleri keşfedin.  <h2>YAKLAŞAN ETKİNLİKLER!</h2>
-                <p>Değerli Aday Öğrencilerimiz,</p>
-                <p>Üniversitemizin Düzenlediği Etkinlikler
-                  Üniversitemizde eğitim ve öğretim döneminde birçok etkinlik düzenlenmektedir. Siz değerli öğrencilerimizi bu etkinliklere katılmaya davet ediyoruz. İşte yaklaşan bazı etkinlikler:
-                  <p>*prof.dr xxxx hocanın konferansı.</p></p>
-              <a href="#" class="btn btn-primary">Daha fazla bilgi</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <div class="card">
-            <img src="loudspeaker-1459128_1280.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">duyurular</h5>
-              <p class="card-text">En son haberleri takip edin.  <h2>DUYMAYAN KALMASIN!</h2>
-                <p>Değerli Aday Öğrencilerimiz,</p>
-                <P>KAYITLar başlamıştır</P>
-                <p>Üniversitemize hoş geldiniz! Üniversite hayatınızın en heyecan verici ve önemli dönemlerinden biri olacaktır. Bu süreçte sizlere en iyi eğitim imkanlarını sunmak için buradayız.</p></p>
-              <a href="#" class="btn btn-primary">Daha fazla bilgi</a>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
+
+      <!-- İkinci Scrollspy Bileşeni -->
+      <div class="col-md-4">
+          <img src="loudspeaker-1459128_1280.png" alt="Image 2" class="img-fluid mb-3">
+          <nav id="navbar-example2-2" class="navbar bg-body-tertiary px-3 mb-3">
+              <a class="navbar-brand" href="#">DUYURULAR</a>
+              <ul class="nav nav-pills">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#scrollspyHeading1-2">First</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#scrollspyHeading2-2">Second</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#scrollspyHeading3-2">Third</a></li>
+                          <li><a class="dropdown-item" href="#scrollspyHeading4-2">Fourth</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#scrollspyHeading5-2">Fifth</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </nav>
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example2-2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+              <h4 id="scrollspyHeading1-2">First heading</h4>
+              <p>Bu, ikinci scrollspy bileşeninin birinci bölümüdür.</p>
+              <h4 id="scrollspyHeading2-2">Second heading</h4>
+              <p>Bu, ikinci scrollspy bileşeninin ikinci bölümüdür.</p>
+              <h4 id="scrollspyHeading3-2">Third heading</h4>
+              <p>Bu, ikinci scrollspy bileşeninin üçüncü bölümüdür.</p>
+              <h4 id="scrollspyHeading4-2">Fourth heading</h4>
+              <p>Bu, ikinci scrollspy bileşeninin dördüncü bölümüdür.</p>
+              <h4 id="scrollspyHeading5-2">Fifth heading</h4>
+              <p>Bu, ikinci scrollspy bileşeninin beşinci bölümüdür.</p>
+          </div>
+      </div>
+
+      <!-- Üçüncü Scrollspy Bileşeni -->
+      <div class="col-md-4">
+          <img src="flag-1095057_640.png" alt="Image 3" class="img-fluid mb-3">
+          <nav id="navbar-example2-3" class="navbar bg-body-tertiary px-3 mb-3">
+              <a class="navbar-brand" href="#">ETKİNLİKLER</a>
+              <ul class="nav nav-pills">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#scrollspyHeading1-3">First</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#scrollspyHeading2-3">Second</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#scrollspyHeading3-3">Third</a></li>
+                          <li><a class="dropdown-item" href="#scrollspyHeading4-3">Fourth</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#scrollspyHeading5-3">Fifth</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </nav>
+          <div data-bs-spy="scroll" data-bs-target="#navbar-example2-3" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+              <h4 id="scrollspyHeading1-3">First heading</h4>
+              <p>Bu, üçüncü scrollspy bileşeninin birinci bölümüdür.</p>
+              <h4 id="scrollspyHeading2-3">Second heading</h4>
+              <p>Bu, üçüncü scrollspy bileşeninin ikinci bölümüdür.</p>
+              <h4 id="scrollspyHeading3-3">Third heading</h4>
+              <p>Bu, üçüncü scrollspy bileşeninin üçüncü bölümüdür.</p>
+              <h4 id="scrollspyHeading4-3">Fourth heading</h4>
+              <p>Bu, üçüncü scrollspy bileşeninin dördüncü bölümüdür.</p>
+              <h4 id="scrollspyHeading5-3">Fifth heading</h4>
+              <p>Bu, üçüncü scrollspy bileşeninin beşinci bölümüdür.</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
 <br>
 <center>
     <button type="button" class="btn btn-primary">belge doğrulama</button>
