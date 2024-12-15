@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optik Kağıdı İndir</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            background-image: url('optik1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        #output {
+            margin-top: 10px;
+            border: 1px solid black;
+            display: inline-block;
+            background-color: white;
+            text-align: left;
+            padding: 5px;
+            color: red;
+            border-radius: 5px;
+        }
+        .group-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .group-column {
+            margin-bottom: 20px;
+        }
+        .group p {
+            margin: 2px 0;
+        }
+        #jpg {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 20px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input {
+            border-radius: 50px;
+        }
+        #isaret {
+            background-color: rgb(154, 255, 255);
+            margin-left: 420px;
+            margin-right: 420px;
+            border-radius: 50px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        td, th {
+            padding: 5px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+           
+        tr:nth-child(2n+1) {
+            background-color: #f0f0f0; 
+        }
+        .info-box {
+            margin: 5px 0;
+            padding: 5px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #007bff;
+            background-color: #f0f8ff;
+        }
+        .input-box {
+            width: 100%;
+            max-width: 150px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .input-container {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .input-group {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .column-label {
+            display: inline-block;
+            margin-right: 15px;
+            width: 150px;
+        }
+
+        /* Style for vertical layout of Ad Soyad and others */
+        .vertical-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .vertical-layout label {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Optik Kağıdı Oluştur ve Kaydet</h1>
+        <form class="FORM1" id="inputForm">
+            <label for="girilenSayi">Soru Sayısını Giriniz:</label>
+            <input type="number" id="girilenSayi">
+            <button type="submit">Optiği oluştur</button>
+        </form>
+
+        <div id="isaret" class="dynamic-input">
+            <label>
+                <input type="checkbox" id="adSoyadCheckbox"> Ad Soyad
+            </label>
+            <label>
+                <input type="checkbox" id="bolumCheckbox"> Bölüm
+            </label>
+            <label>
+                <input type="checkbox" id="ogrenciNoCheckbox"> Öğrenci No
+            </label>
+            <label>
+                <input type="checkbox" id="tarihSaatCheckbox"> Tarih Saat
+            </label>
+        </div>
+
+        <div id="label">
+            <label for="harfler">Şık seçeneği</label>
+            <select id="harfler">
+                <option value="1">2-Şıklı</option>
+                <option value="2">3-Şıklı</option>
+                <option value="3">4-Şıklı</option>
+                <option value="4" selected>5-Şıklı</option>
+            </select>
+        </div>
+
+        <div id="comboBox" class="dynamic-input">
+            <label for="rows">Satır Sayısı:</label>
+            <select id="rows">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+            </select>
+            <label for="columns">Sütun Sayısı:</label>
+            <select id="columns">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+        </div>
+    </div>
+    <button type="button" onclick="DownloadAsImage()" id="jpg">Optik Görselini İndir</button>
+    <div id="output"></div>
+
+    <script>
+        const checkboxes = [
+            { id: "adSoyadCheckbox" },
+            { id: "bolumCheckbox" },
+            { id: "ogrenciNoCheckbox"},
+            { id: "tarihSaatCheckbox" }
+        ];
+
+        const outputDiv = document.getElementById("output");
+        const girilenSayiInput = document.getElementById("girilenSayi");
+        const submitButton = document.querySelector("button[type='submit']");
+
+        checkboxes.forEach(item => {
+            const checkbox = document.getElementById(item.id);
+            checkbox.addEventListener("change", function () {
+                toggleFormState();
+            });
+        });
+
+        function toggleFormState() {
+            const anyChecked = checkboxes.some(item => document.getElementById(item.id).checked);
+            girilenSayiInput.disabled = !anyChecked;
+            submitButton.disabled = !anyChecked;
+        }
+
+        document.getElementById("inputForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const girilenSayi = parseInt(document.getElementById("girilenSayi").value);
+            outputDiv.textContent = "";
+
+            // Create a table for optik form and add Ad Soyad, Bölüm, Öğrenci No, Tarih Saat
+            const table = document.createElement("table");
+            outputDiv.appendChild(table);
+
+            // Add table headers
+            const headerRow = document.createElement("tr");
+            table.appendChild(headerRow);
+            headerRow.innerHTML = "<th></th><th></th><th></th><th></th>";
+
+            // Create a row for each checkbox option
+            const dataRow = document.createElement("tr");
+            table.appendChild(dataRow);
+
+            checkboxes.forEach(item => {
+                const td = document.createElement("td");
+                if (document.getElementById(item.id).checked) {
+                    const span = document.createElement("span");
+                    span.textContent = item.placeholder;  // Directly adding text here instead of input
+                    span.className = "input-box";
+                    td.appendChild(span);
+                } else {
+                    td.textContent = ""; // If unchecked, leave empty
+                }
+                dataRow.appendChild(td);
+            });
+
+            if (document.getElementById("adSoyadCheckbox").checked || document.getElementById("tarihSaatCheckbox").checked) {
+    const combinedDiv = document.createElement("div");
+    combinedDiv.style.border = "1px solid black"; // Blue border
+    combinedDiv.style.padding = "15px"; // Padding inside the border
+    combinedDiv.style.marginBottom = "10px"; // Bottom margin for spacing
+    combinedDiv.style.borderRadius = "8px"; // Optional rounded corners
+    combinedDiv.classList.add("vertical-layout");
+
+    if (document.getElementById("adSoyadCheckbox").checked) {
+        const adSoyadSpan = document.createElement("span");
+        adSoyadSpan.textContent = "Ad Soyad:__________";
+        const ogrenciNoSpan = document.createElement("span");
+        ogrenciNoSpan.textContent = "Öğrenci No:__________";
+        combinedDiv.appendChild(adSoyadSpan);
+        combinedDiv.appendChild(ogrenciNoSpan);
+    }
+
+    if (document.getElementById("tarihSaatCheckbox").checked) {
+        const tarihSpan = document.createElement("span");
+        tarihSpan.textContent = "Tarih/Saat:__________";
+        const bolumSpan = document.createElement("span");
+        bolumSpan.textContent = "Bölüm:_________________";
+        combinedDiv.appendChild(tarihSpan);
+        combinedDiv.appendChild(bolumSpan);
+    }
+
+    outputDiv.appendChild(combinedDiv);
+}
+
+
+
+            // Handling for questions (Satır Sayısı, Şık Seçeneği)
+            if (girilenSayi > 0) {
+                const rows = parseInt(document.getElementById("rows").value);
+                const columns = parseInt(document.getElementById("columns").value);
+
+                // Create optik form questions table
+                const questionTable = document.createElement("table");
+                outputDiv.appendChild(questionTable);
+
+                // Table headers for questions
+               
+                // Table headers for questions
+const questionHeaderRow = document.createElement("tr");
+questionTable.appendChild(questionHeaderRow);
+
+// Create textboxes for each question column instead of headers
+for (let col = 0; col < columns; col++) {
+    const th = document.createElement("th");
+    const inputBox = document.createElement("input");
+    inputBox.type = "text"; // Creating a textbox for input
+    inputBox.className = "input-box"; // Optional: Apply your input-box class for styling
+    th.appendChild(inputBox);
+    questionHeaderRow.appendChild(th);
+}
+
+
+                // Create rows for each question
+                for (let i = 0; i < rows; i++) {
+                    const row = document.createElement("tr");
+                    questionTable.appendChild(row);
+
+                    for (let col = 0; col < columns; col++) {
+                        const td = document.createElement("td");
+                        const questionNumber = i + 1 + (col * rows);
+                        if (questionNumber <= girilenSayi) {
+                            let textRepresentation = `${questionNumber}. Ⓐ Ⓑ `;
+                            const secilenharf = document.getElementById("harfler").value;
+                            if (secilenharf === "4") {
+                                textRepresentation += "Ⓒ Ⓓ Ⓔ";
+                            } else if (secilenharf === "3") {
+                                textRepresentation += "Ⓒ Ⓓ";
+                            } else if (secilenharf === "2") {
+                                textRepresentation += "Ⓒ";
+                            }
+                            td.textContent = textRepresentation;
+                        }
+                        row.appendChild(td);
+                    }
+                }
+            }
+        });
+
+        function DownloadAsImage() {
+            html2canvas(outputDiv, { width: outputDiv.offsetWidth, height: outputDiv.offsetHeight }).then(function (canvas) {
+                const myImage = canvas.toDataURL("image/png");
+                const link = document.createElement("a");
+                link.download = "optik-kagidi.png";
+                link.href = myImage;
+                link.click();
+            });
+        }
+    </script>
+</body>
+</html>
