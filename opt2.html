@@ -1,18 +1,264 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optik Kağıdı İndir</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Sidebars · Bootstrap v5.0</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            text-align: center;
-            background-image: url('optik1.jpg');
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        height: 100vh;
+      }
+
+      #sidebar {
+        width: 600px;
+        background-color: #f4f4f4;
+        padding: 10px;
+        overflow-y: auto;
+        border-right: 1px solid #ccc;
+      }
+
+      #mainContent {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        background-color: #fff;
+      }
+
+      #output {
+        margin-top: 10px;
+        padding: 15px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: #fff;
+      }
+
+      button {
+        margin: 5px 0;
+      }
+
+      .form-container {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 30px;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 40px auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .checkbox-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .checkbox-container label {
+        font-size: 1.1em;
+        margin: 5px;
+      }
+
+      input[type="number"],
+      select {
+        border-radius: 10px;
+        padding: 12px;
+        font-size: 1.1em;
+        transition: border-color 0.3s;
+      }
+
+      input[type="number"]:focus,
+      select:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        border-radius: 50px;
+        padding: 12px 30px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+        transform: scale(1.1);
+      }
+
+      .input-container {
+        display: block;
+        margin: 15px 0;
+      }
+
+      .input-container select,
+      .input-container input {
+        width: 50%;
+        display: inline-block;
+      }
+
+      .input-container label {
+        width: 40%;
+        display: inline-block;
+        text-align: left;
+        margin-right: 10px;
+      }
+
+      .tooltip {
+        visibility: hidden;
+        background-color: #6c757d;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      label:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0;
+      }
+
+      td,
+      th {
+        padding: 5px;
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+
+      tr:nth-child(2n+1) {
+        background-color: #f0f0f0;
+      }
+
+      .kutu1 {
+        width: 60%;
+        height: 300px;
+        overflow-y: auto;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #333;
+        background-color: #dce4ee;
+        display: block;
+      }
+
+      .kutu1 p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin: 15px 0;
+      }
+
+      .kutu1 b {
+        font-size: 1.3em;
+        color: #007bff;
+      }
+
+      .kutu1 ul {
+        list-style-type: none;
+        padding-left: 20px;
+      }
+      body {
+            font-family: 'Arial', sans-serif;
+
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #333;
         }
+
+        h1 {
+            font-size: 2em;
+            color: #fff;
+            margin-top: 40px;
+            background-color: #ecf5ff;
+            border-radius: 50%;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 40px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-container label {
+            font-weight: bold;
+            margin: 10px 0;
+            display: block;
+            font-size: 1.1em;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        .form-container button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-container .checkbox-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .form-container .checkbox-container label {
+            font-size: 1.1em;
+            margin: 5px;
+        }
+
+        #isaret {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        #isaret label {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
         #output {
             margin-top: 10px;
             border: 1px solid black;
@@ -20,167 +266,352 @@
             background-color: white;
             text-align: left;
             padding: 5px;
-            color: red;
+
             border-radius: 5px;
         }
-        .group-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-            text-align: center;
-        }
-        .group-column {
-            margin-bottom: 20px;
-        }
-        .group p {
-            margin: 2px 0;
-        }
+
         #jpg {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            padding: 20px 20px;
-            background-color: #007bff;
+            padding: 15px 25px;
+            background-color: #28a745;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
         }
-        input {
-            border-radius: 50px;
+
+        #jpg:hover {
+            background-color: #218838;
         }
-        #isaret {
-            background-color: rgb(154, 255, 255);
-            margin-left: 420px;
-            margin-right: 420px;
-            border-radius: 50px;
+
+        .input-container {
+            display: block;
+            margin: 15px 0;
         }
+
+        .input-container select,
+        .input-container input {
+            width: 50%;
+            display: inline-block;
+        }
+
+        .input-container label {
+            width: 40%;
+            display: inline-block;
+            text-align: left;
+            margin-right: 10px;
+        }
+
+        .info-box {
+            background-color: #f0f8ff;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 20px;
+            color: #007bff;
+            font-weight: bold;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 10px 0;
         }
-        td, th {
+
+        td,
+        th {
             padding: 5px;
             border: 1px solid #ccc;
             text-align: center;
         }
-           
+
         tr:nth-child(2n+1) {
-            background-color: #f0f0f0; 
+            background-color: #f0f0f0;
         }
-        .info-box {
-            margin: 5px 0;
-            padding: 5px;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            font-weight: bold;
-            color: #007bff;
-            background-color: #f0f8ff;
-        }
+
         .input-box {
-            width: 100%;
-            max-width: 150px;
-            padding: 5px;
+            width: 50%;
+            padding: 10px;
             border-radius: 5px;
             border: 1px solid #ccc;
         }
-        .input-container {
-            display: block;
-            margin-bottom: 10px;
-        }
-        .input-group {
-            display: block;
-            margin-bottom: 10px;
-        }
-        .column-label {
-            display: inline-block;
-            margin-right: 15px;
-            width: 150px;
+
+        .baslık {
+            color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
 
-        /* Style for vertical layout of Ad Soyad and others */
-        .vertical-layout {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-top: 30px;
+            font-size: 2.5em;
         }
-        .vertical-layout label {
-            text-align: left;
+
+        .kutu1 {
+            width: 400px;
+            height: 300px;
+            overflow-y: auto;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #333;
+            background-color: #dce4ee;
+            display: block;
+
+        }
+
+        .kutu1 p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .kutu1 b {
+            font-size: 1.3em;
+            color: #007bff;
+        }
+
+        .kutu1 ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .kutu1 ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .kutu1 ul li::before {
+            content: "✔️";
+            margin-right: 10px;
+            color: #28a745;
+        }
+
+        .kutu1 p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .kutu1 p a:hover {
+            text-decoration: underline;
+        }
+
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 30px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+            /* Hover animasyonu */
+        }
+
+        input[type="number"],
+        select {
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 1.1em;
+            transition: border-color 0.3s;
+        }
+
+        input[type="number"]:focus,
+        select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button {
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .tooltip {
+            visibility: hidden;
+            background-color: #6c757d;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        label:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
         }
     </style>
-</head>
-<body>
-    <div>
-        <h1>Optik Kağıdı Oluştur ve Kaydet</h1>
-        <form class="FORM1" id="inputForm">
-            <label for="girilenSayi">Soru Sayısını Giriniz:</label>
-            <input type="number" id="girilenSayi">
-            <button type="submit">Optiği oluştur</button>
-        </form>
-
-        <div id="isaret" class="dynamic-input">
-            <label>
-                <input type="checkbox" id="adSoyadCheckbox"> Ad Soyad
-            </label>
-            <label>
-                <input type="checkbox" id="bolumCheckbox"> Bölüm
-            </label>
-            <label>
-                <input type="checkbox" id="ogrenciNoCheckbox"> Öğrenci No
-            </label>
-            <label>
-                <input type="checkbox" id="tarihSaatCheckbox"> Tarih Saat
-            </label>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <h1 class="baslık">Optik Kağıdı Oluştur ve Kaydet</h1>
+        <br><br><br>
+        <button onclick="document.querySelector('.kutu1').style.display='block'">Nasıl Kullanılır Rehberi Aç</button>
+        <button onclick="document.querySelector('.kutu1').style.display='none'">Nasıl Kullanılır Rehberi Kapat</button>
+    
+    
+        <div class="kutu1" style="display:none;">
+            <p style="font-size: 40px;background-color: rgb(252, 252, 164);border-radius: 10px;"><b>Optik Kağıdı Oluşturma Ve Kişiselleştirme İşlemleri Artık Çok Kolay!</b></p>
+            <p>Bu kullanıcı dostu uygulama sayesinde, sınavlarınız veya quizleriniz için optik kağıtları hızlıca
+                oluşturabilirsiniz. Uygulama, ad-soyad, bölüm, öğrenci numarası ve tarih-saat gibi bilgileri ekleyebilme
+                imkanı sunarken, şık sayısını ve satır-sütun düzenini tamamen sizin tercihinize göre ayarlamanıza olanak
+                tanır.</p>
+            <p><b style="background-color: rgb(252, 252, 164)">Özellikler:</b></p>
+            <ul style="text-align:left;">
+                <li><b>Soru Sayısı Belirleme:</b> İstediğiniz kadar soru girebilirsiniz.</li>
+                <li><b>Kişisel Bilgiler Ekleme:</b> Öğrencilerin ad-soyad, bölüm, öğrenci numarası gibi bilgilerini optik
+                    kağıdınıza ekleyebilirsiniz.</li>
+                <li><b>Şık Seçeneği:</b> 2, 3, 4 veya 5 şıklı seçenekleri ile sorularınızı oluşturabilirsiniz.</li>
+                <li><b>Satır ve Sütun Seçimi:</b> Tabloyu istediğiniz satır ve sütun sayısında düzenleyebilirsiniz.</li>
+                <li><b>Metin Rengi Seçimi:</b> Sorularınızın metin rengini kişisel tercihinize göre belirleyebilirsiniz.
+                </li>
+                <li><b>Optik Kağıdı Görseli:</b> Optik kağıdınızı görsel olarak kaydedebilir ve bilgisayarınıza
+                    indirebilirsiniz.</li>
+                    <li><b>Deneme Sınavı için Optik:</b>Deneme Sınavları İçin OPtik Oluşturup "Soru" Yazan Kısımlara Ders Adı Girebilirsiniz
+                       .</li>
+            </ul>
+    
+            <p><b style="background-color: rgb(252, 252, 164)">Kullanım Kolaylığı</b></p>
+            <p>Basit ve anlaşılır kullanıcı arayüzü ile optik kağıtlarınızı birkaç adımda oluşturabilirsiniz. Formu
+                doldururken her adımda size rehberlik eden işaretler sayesinde zorlanmazsınız.</p>
+    
+            <p><b style="background-color: rgb(252, 252, 164)">Nasıl Kullanılır?</b></p>
+            <ul style="text-align:left;">
+                <li>İlgili alanlara soru sayısı, şık seçeneği, satır ve sütun sayısı gibi bilgileri girin.</li>
+                <li>İstediğiniz kişisel bilgileri seçin.</li>
+                <li>"Optiği Oluştur" butonuna tıklayın ve optik kağıdınız ekranda görüntülensin.</li>
+                <li>Aynı işlemleri deneme sınavı için oluşturacağınız optik içinde kullanın.</li>
+                <li>Optik kağıdınızdaki görseli "Optik Görselini İndir" butonuyla bilgisayarınıza kaydedin.</li>
+            </ul>
+    
+            <p>Bu uygulama, sınavlarınız ve testleriniz için hızlı ve pratik bir çözüm sunar. Kullanıcı dostu arayüzü
+                sayesinde zaman kazanabilir ve sınav hazırlığınızı daha verimli hale getirebilirsiniz.</p>
         </div>
-
-        <div id="label">
-            <label for="harfler">Şık seçeneği</label>
-            <select id="harfler">
-                <option value="1">2-Şıklı</option>
-                <option value="2">3-Şıklı</option>
-                <option value="3">4-Şıklı</option>
-                <option value="4" selected>5-Şıklı</option>
-            </select>
-        </div>
-
-        <div id="comboBox" class="dynamic-input">
-            <label for="rows">Satır Sayısı:</label>
-            <select id="rows">
-                <option value="5">5</option>
-                <option value="10">10</option>
-                <option value="15">15</option>
-                <option value="20">20</option>
-                <option value="25">25</option>
-                <option value="30">30</option>
-            </select>
-            <label for="columns">Sütun Sayısı:</label>
-            <select id="columns">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-            </select>
+    
+        <div class="form-container">
+            <form class="FORM1" id="inputForm">
+                <div class="input-container">
+                    <label for="girilenSayi">Soru Sayısını Giriniz:</label>
+                    <input type="number" id="girilenSayi" required>
+                </div>
+                <p style="text-align:left ;"><b>Var Olamasını İstediğini Alanları Seçim</b></p>
+                <div id="isaret" class="checkbox-container">
+                    <label>
+                        <input type="checkbox" id="Ad-SoyadCheckbox"> Ad Soyad
+                    </label>
+                    <label>
+                        <input type="checkbox" id="BölümCheckbox"> Bölüm
+                    </label>
+                    <label>
+                        <input type="checkbox" id="Ögrenci-NoCheckbox"> Öğrenci No
+                    </label>
+                    <label>
+                        <input type="checkbox" id="Tarih/SaatCheckbox"> Tarih Saat
+                    </label>
+                    <label>
+                        <input type="checkbox" id="İmzaCheckbox"> imza
+                    </label>
+                </div>
+    
+                <div class="input-container">
+                    <label for="harfler">Şık Seçeneği:</label>
+                    <select id="harfler">
+                        <option value="1">2-Şıklı(A B )</option>
+                        <option value="2">3-Şıklı(A B C)</option>
+                        <option value="3">4-Şıklı(A B C D)</option>
+                        <option value="4" selected>5-Şıklı(A B C D E)</option>
+                    </select>
+                </div>
+    
+                <div class="input-container">
+                    <label for="rows">Satır Sayısı:</label>
+                    <select id="rows">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                    </select>
+    
+                    <label for="columns">Sütun Sayısı:</label>
+                    <select id="columns">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </div>
+    
+                <div class="input-container">
+                    <label for="textColor">Metin Rengini Seçin:</label>
+                    <select id="textColor">
+                        <option value="black">Siyah</option>
+                        <option value="green">Yeşil</option>
+                        <option value="blue">Mavi</option>
+                        <option value="red">Kırmızı</option>
+                        <option value="orange">Turuncu</option>
+                        <option value="purple">Mor</option>
+                        <option value="pink">Pembe</option>
+                    </select>
+                </div>
+    
+                <button type="submit">Yazılı Sınavı İçin Oluştur</button>
+                <button id="toggleFeature">Deneme SInavı İçin Oluştur</button>
+    
+            </form>
         </div>
     </div>
-    <button type="button" onclick="DownloadAsImage()" id="jpg">Optik Görselini İndir</button>
-    <div id="output"></div>
 
-    <script>
+    <button type="button" onclick="DownloadAsImage()" id="jpg">Optik Görselini İndir</button>
+    <!-- Main Content -->
+    <div id="mainContent">
+      <div id="output">Sonuç burada görünecek.</div>
+    </div>
+
+  <script>
         const checkboxes = [
-            { id: "adSoyadCheckbox" },
-            { id: "bolumCheckbox" },
-            { id: "ogrenciNoCheckbox"},
-            { id: "tarihSaatCheckbox" }
+            { id: "Ad-SoyadCheckbox" },
+            { id: "BölümCheckbox" },
+            { id: "Ögrenci-NoCheckbox" },
+            { id: "Tarih/SaatCheckbox" },
+            { id: "İmzaCheckbox" }
+
         ];
 
         const outputDiv = document.getElementById("output");
         const girilenSayiInput = document.getElementById("girilenSayi");
         const submitButton = document.querySelector("button[type='submit']");
+
+
+        const textColorSelect = document.getElementById("textColor");
+        textColorSelect.addEventListener("change", function () {
+            outputDiv.style.color = textColorSelect.value;
+        });
 
         checkboxes.forEach(item => {
             const checkbox = document.getElementById(item.id);
@@ -197,127 +628,250 @@
 
         document.getElementById("inputForm").addEventListener("submit", function (event) {
             event.preventDefault();
-            const girilenSayi = parseInt(document.getElementById("girilenSayi").value);
-            outputDiv.textContent = "";
 
-            // Create a table for optik form and add Ad Soyad, Bölüm, Öğrenci No, Tarih Saat
+            const girilenSayi = parseInt(document.getElementById("girilenSayi").value);
+            const rows = parseInt(document.getElementById("rows").value); // Seçilen satır sayısı
+            const columns = parseInt(document.getElementById("columns").value); // Seçilen sütun sayısı
+            const secilenharf = document.getElementById("harfler").value; // Şık seçeneği
+            outputDiv.textContent = ""; // Önce eski tabloyu temizliyoruz.
+
+            // Ad Soyad, Bölüm, Öğrenci No, Tarih Saat bölümlerini ekle
+            const container = document.createElement("div");
+            // Tek çerçeve için div oluştur
+            container.style.border = "1px solid gray"; // Çerçeve stili
+            container.style.padding = "1px"; // Küçük iç boşluk
+            container.style.margin = "5px 0"; // Dış boşluk
+            container.style.width = "300px"; // Genişliği sabitle
+            container.style.display = "inline-block"; // İçeriğe göre boyutlanma
+            container.style.borderRadius = "8px";
+            
+
+            checkboxes.forEach(item => {
+                if (document.getElementById(item.id).checked) {
+                    const p = document.createElement("pp");
+                    
+
+                    const label = document.createElement("span");
+                    label.textContent = `${item.id.replace('Checkbox', '')}: `;
+                    label.style.display = "inline-block";
+                    label.style.width = "50px"; // Etiketin genişliğini sabitle
+                    label.style.textAlign = "left"; // Etiketi sola hizala
+                    p.appendChild(label);
+
+                    // Çizgi için bir span ekleyin
+                    const line = document.createElement("span");
+                    line.style.display = "inline-block";
+                    line.style.width = "240px"; // Çizginin uzunluğunu ayarlayın
+            
+                    line.style.borderBottom = "1px solid black"; // Çizgi stilini belirleyin
+                    line.style.borderRadius = "10px";
+                    p.appendChild(line);
+
+                    container.appendChild(p); // Yeni div'in içine ekle
+                    
+                }
+            });
+
+            outputDiv.appendChild(container); // Son olarak container'ı outputDiv'e ekle
+
+
+
+            // Tabloyu oluştur
             const table = document.createElement("table");
             outputDiv.appendChild(table);
 
-            // Add table headers
-            const headerRow = document.createElement("tr");
-            table.appendChild(headerRow);
-            headerRow.innerHTML = "<th></th><th></th><th></th><th></th>";
+            let questionNumber = 1; // Soru numarası
+            for (let col = 0; col < columns; col++) {
+                const colContainer = document.createElement("td");
+                const colTable = document.createElement("table"); // Her sütun için ayrı bir tablo
 
-            // Create a row for each checkbox option
-            const dataRow = document.createElement("tr");
-            table.appendChild(dataRow);
+                for (let row = 0; row < rows; row++) {
+                    if (questionNumber <= girilenSayi) {
+                        const tableRow = document.createElement("tr"); // Yeni bir satır
+                        const td = document.createElement("td"); // Yeni bir hücre
 
-            checkboxes.forEach(item => {
-                const td = document.createElement("td");
-                if (document.getElementById(item.id).checked) {
-                    const span = document.createElement("span");
-                    span.textContent = item.placeholder;  // Directly adding text here instead of input
-                    span.className = "input-box";
-                    td.appendChild(span);
-                } else {
-                    td.textContent = ""; // If unchecked, leave empty
-                }
-                dataRow.appendChild(td);
-            });
-
-            if (document.getElementById("adSoyadCheckbox").checked || document.getElementById("tarihSaatCheckbox").checked) {
-    const combinedDiv = document.createElement("div");
-    combinedDiv.style.border = "1px solid black"; // Blue border
-    combinedDiv.style.padding = "15px"; // Padding inside the border
-    combinedDiv.style.marginBottom = "10px"; // Bottom margin for spacing
-    combinedDiv.style.borderRadius = "8px"; // Optional rounded corners
-    combinedDiv.classList.add("vertical-layout");
-
-    if (document.getElementById("adSoyadCheckbox").checked) {
-        const adSoyadSpan = document.createElement("span");
-        adSoyadSpan.textContent = "Ad Soyad:__________";
-        const ogrenciNoSpan = document.createElement("span");
-        ogrenciNoSpan.textContent = "Öğrenci No:__________";
-        combinedDiv.appendChild(adSoyadSpan);
-        combinedDiv.appendChild(ogrenciNoSpan);
-    }
-
-    if (document.getElementById("tarihSaatCheckbox").checked) {
-        const tarihSpan = document.createElement("span");
-        tarihSpan.textContent = "Tarih/Saat:__________";
-        const bolumSpan = document.createElement("span");
-        bolumSpan.textContent = "Bölüm:_________________";
-        combinedDiv.appendChild(tarihSpan);
-        combinedDiv.appendChild(bolumSpan);
-    }
-
-    outputDiv.appendChild(combinedDiv);
-}
-
-
-
-            // Handling for questions (Satır Sayısı, Şık Seçeneği)
-            if (girilenSayi > 0) {
-                const rows = parseInt(document.getElementById("rows").value);
-                const columns = parseInt(document.getElementById("columns").value);
-
-                // Create optik form questions table
-                const questionTable = document.createElement("table");
-                outputDiv.appendChild(questionTable);
-
-                // Table headers for questions
-               
-                // Table headers for questions
-const questionHeaderRow = document.createElement("tr");
-questionTable.appendChild(questionHeaderRow);
-
-// Create textboxes for each question column instead of headers
-for (let col = 0; col < columns; col++) {
-    const th = document.createElement("th");
-    const inputBox = document.createElement("input");
-    inputBox.type = "text"; // Creating a textbox for input
-    inputBox.className = "input-box"; // Optional: Apply your input-box class for styling
-    th.appendChild(inputBox);
-    questionHeaderRow.appendChild(th);
-}
-
-
-                // Create rows for each question
-                for (let i = 0; i < rows; i++) {
-                    const row = document.createElement("tr");
-                    questionTable.appendChild(row);
-
-                    for (let col = 0; col < columns; col++) {
-                        const td = document.createElement("td");
-                        const questionNumber = i + 1 + (col * rows);
-                        if (questionNumber <= girilenSayi) {
-                            let textRepresentation = `${questionNumber}. Ⓐ Ⓑ `;
-                            const secilenharf = document.getElementById("harfler").value;
-                            if (secilenharf === "4") {
-                                textRepresentation += "Ⓒ Ⓓ Ⓔ";
-                            } else if (secilenharf === "3") {
-                                textRepresentation += "Ⓒ Ⓓ";
-                            } else if (secilenharf === "2") {
-                                textRepresentation += "Ⓒ";
-                            }
-                            td.textContent = textRepresentation;
+                        // Soru ve şık seçeneklerini ekle
+                        let textRepresentation = `${questionNumber}. Ⓐ Ⓑ`;
+                        if (secilenharf === "4") {
+                            textRepresentation += " Ⓒ Ⓓ Ⓔ"; // 5-Şıklı
+                        } else if (secilenharf === "3") {
+                            textRepresentation += " Ⓒ Ⓓ"; // 4-Şıklı
+                        } else if (secilenharf === "2") {
+                            textRepresentation += " Ⓒ"; // 3-Şıklı
                         }
-                        row.appendChild(td);
+
+                        td.textContent = textRepresentation; // Hücreye metni ekle
+                        tableRow.appendChild(td); // Hücreyi satıra ekle
+                        colTable.appendChild(tableRow); // Satırı sütun tablosuna ekle
+
+                        questionNumber++; // Bir sonraki soruya geç
                     }
                 }
+                colContainer.appendChild(colTable); // Sütun tablosunu sütun hücresine ekle
+                table.appendChild(colContainer); // Sütun hücresini ana tabloya ekle
             }
         });
 
-        function DownloadAsImage() {
+
+        
+        // Yeni özelliği aktif hale getiren işlev
+function activateNewFeature() {
+    // Mevcut form olayını kaldır
+    
+
+    // Yeni form olayını bağla
+    document.getElementById("inputForm").addEventListener("submit", yeniFormIslemi);
+}
+
+// Eski form işlemi (varsa, mevcut işlemleri burada tanımlayın)
+function eskiFormIslemi(event) {
+    event.preventDefault();
+    console.log("Eski form işlemi çalışıyor.");
+}
+
+            // Ad Soyad, Bölüm, Öğrenci No, Tarih Saat bölümlerini ekle
+            const container = document.createElement("div");
+            // Tek çerçeve için div oluştur
+            container.style.border = "1px solid gray"; // Çerçeve stili
+            container.style.padding = "1px"; // Küçük iç boşluk
+            container.style.margin = "5px 0"; // Dış boşluk
+            container.style.width = "300px"; // Genişliği sabitle
+            container.style.display = "inline-block"; // İçeriğe göre boyutlanma
+            container.style.borderRadius = "8px";
+            container.style.backgroundColor = "#f0f0f0";
+
+            function yeniFormIslemi(event) {
+    event.preventDefault();
+    const girilenSayi = parseInt(document.getElementById("girilenSayi").value);
+    outputDiv.textContent = "";
+
+    // Ad Soyad, Bölüm, Öğrenci No ve Tarih Saat kısımlarını ekle
+   
+    const container = document.createElement("div");
+            // Tek çerçeve için div oluştur
+            container.style.border = "1px solid gray"; // Çerçeve stili
+            container.style.padding = "1px"; // Küçük iç boşluk
+            container.style.margin = "5px 0"; // Dış boşluk
+            container.style.width = "300px"; // Genişliği sabitle
+            container.style.display = "inline-block"; // İçeriğe göre boyutlanma
+            container.style.borderRadius = "8px";
+            container.style.backgroundColor = "#f0f0f0";
+
+            checkboxes.forEach(item => {
+                if (document.getElementById(item.id).checked) {
+                    const p = document.createElement("p");
+
+                    const label = document.createElement("span");
+                    label.textContent = `${item.id.replace('Checkbox', '')}: `;
+                    label.style.display = "inline-block";
+                    label.style.width = "80px"; // Etiketin genişliğini sabitle
+                    label.style.textAlign = "left"; // Etiketi sola hizala
+                    p.appendChild(label);
+
+                    // Çizgi için bir span ekleyin
+                    const line = document.createElement("span");
+                    line.style.display = "inline-block";
+                    line.style.width = "150px"; // Çizginin uzunluğunu ayarlayın
+                    line.style.borderBottom = "1px solid black"; // Çizgi stilini belirleyin
+                    line.style.borderRadius = "10px";
+                    p.appendChild(line);
+
+                    container.appendChild(p); // Yeni div'in içine ekle
+                }
+            });
+
+            outputDiv.appendChild(container); // Son olarak container'ı outputDiv'e ekle
+
+   
+    if (girilenSayi > 0) {
+        const rows = parseInt(document.getElementById("rows").value);
+        const columns = parseInt(document.getElementById("columns").value);
+
+        // Create table for optik form
+        const table = document.createElement("table");
+        outputDiv.appendChild(table);
+        
+
+        // Table headers
+        const headerRow = document.createElement("tr");
+        table.appendChild(headerRow);
+
+        for (let col = 0; col < columns; col++) {
+            const th = document.createElement("th");
+
+            // Textbox oluşturma
+            const input = document.createElement("input");
+            input.type = "text";
+            input.value = `ders ${col + 1}`; // Varsayılan başlık
+            input.style.width = "100%"; // Sütuna tam oturması
+            input.style.boxSizing = "border-box"; // Taşmayı önler
+            input.style.textAlign = "center"; // Metni ortalar
+
+            th.appendChild(input); // Textbox'ı th içine ekle
+            headerRow.appendChild(th);
+        }
+
+        // Create rows for each question
+        for (let i = 1; i <= girilenSayi; i++) {
+            const row = document.createElement("tr");
+            table.appendChild(row);
+
+            for (let col = 0; col < columns; col++) {
+                const td = document.createElement("td");
+                let textRepresentation = `${i}. Ⓐ Ⓑ `;
+                const secilenharf = document.getElementById("harfler").value;
+                if (secilenharf === "4") {
+                    textRepresentation += "Ⓒ Ⓓ Ⓔ";
+                } else if (secilenharf === "3") {
+                    textRepresentation += "Ⓒ Ⓓ";
+                } else if (secilenharf === "2") {
+                    textRepresentation += "Ⓒ";
+                }
+                td.textContent = textRepresentation;
+                row.appendChild(td);
+            }
+        }
+        }
+    }
+
+// Toggle butonuna olay bağlama
+document.getElementById("toggleFeature").addEventListener("click", activateNewFeature);
+
+function DownloadAsImage() {
+            // Şu anki tarihi ve saati al
+            const now = new Date();
+
+            // Tarih ve saati belirli bir formatta (YYYY-MM-DD_HH-MM-SS) al
+            const timestamp = now.getFullYear() + "-" +
+                (now.getMonth() + 1).toString().padStart(2, "0") + "-" +
+                now.getDate().toString().padStart(2, "0") + "_" +
+                now.getHours().toString().padStart(2, "0") + "-" +
+                now.getMinutes().toString().padStart(2, "0") + "-" +
+                now.getSeconds().toString().padStart(2, "0");
+
+            // html2canvas ile görüntü al
             html2canvas(outputDiv, { width: outputDiv.offsetWidth, height: outputDiv.offsetHeight }).then(function (canvas) {
-                const myImage = canvas.toDataURL("image/png");
-                const link = document.createElement("a");
-                link.download = "optik-kagidi.png";
-                link.href = myImage;
-                link.click();
+                // Görüntüyü base64 formatına çevir
+                const myCanvas = canvas.toDataURL("image/png");
+
+                // Download linki oluştur
+                const downloadLink = document.createElement("a");
+
+                // Görüntüyü link olarak ayarla
+                downloadLink.href = myCanvas;
+
+                // İndirilecek dosyanın adını tarih ve saat ile belirle
+                downloadLink.download = "sinavform.com" + timestamp + ".png";
+
+                // İndirme işlemini başlat
+                downloadLink.click();
             });
         }
+       
+
     </script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+  </body>
 </html>
